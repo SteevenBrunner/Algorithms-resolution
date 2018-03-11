@@ -24,13 +24,14 @@ public class FibonacciSequence {
     }
 
     public static void main(String[] args) {
-        // the best way to test if a Fibonacci sequence function works is :
-        // fibonacci(i) = fibonacci(i-1) + fibonacci(i-2)
+        // the best way to test if a Fibonacci sequence function works is to do :
+        // fibonacci(n) = fibonacci(n - 1) + fibonacci(n - 2)
         // for example fibonacci(5) = fibonacci(4) + fibonacci(3)
-        // the 93rd fibonacci number will overflow a long
-        // it takes a lot of times after 20-30 numbers
+        // the 93rd fibonacci number will overflow a long (but it will take too much time using the recursive way
+        // anyway)
+        // it takes a lot of times after 45-50 numbers using the recursive way (5.8 sec for n =45 with my pc)
 
-        int n = 45;
+        int n = 50;
 
         long tStart = System.currentTimeMillis();
         long result = iterFibonacci(n);
@@ -56,7 +57,7 @@ public class FibonacciSequence {
         tDelta = tEnd - tStart;
         elapsedSeconds = tDelta / 1000.0;
 
-        if (result != recursFibonacci(n - 1) + recursFibonacci(n - 2))
+        if (result != iterFibonacci(n - 1) + iterFibonacci(n - 2))
             System.out.println("Something went wrong in recursFibonacci(int n)");
         else
             System.out.println("recursFibonacci(int n) is working well");
