@@ -3,6 +3,7 @@ package FibonacciSequence;
 public class FibonacciSequence {
 
     // iterative Fibonacci sequence
+    // O(n)
     private static long iterFibonacci(int n) {
         int x = 0;
         int y = 1;
@@ -16,6 +17,7 @@ public class FibonacciSequence {
     }
 
     // recursive Fibonacci sequence
+    // O(fib(n)) = O(1 + sqrt(5))/2) ^n)
     private static long recursFibonacci(int n) {
         if (n <= 1)
             return n;
