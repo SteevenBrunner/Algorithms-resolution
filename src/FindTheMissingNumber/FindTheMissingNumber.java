@@ -3,7 +3,7 @@ package FindTheMissingNumber;
 import java.math.BigInteger;
 import java.util.*;
 
-public class Main {
+public class FindTheMissingNumber {
 
     //Testing 2 ways to find a missing number out of a list.
     //First uses a HashSet
