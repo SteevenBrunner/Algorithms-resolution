@@ -21,10 +21,7 @@ public class FindTheMissingNumber {
         missingNbList.forEach(mySet::remove);
 
         // check values
-        for (Object aMySet : mySet) {
-            return aMySet.toString();
-        }
-        return null;
+        return mySet.iterator().next().toString();
     }
 
     // sum and total can be declared as BigInteger if the sum goes over the limit of a long
